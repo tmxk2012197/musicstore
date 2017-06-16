@@ -19,10 +19,10 @@ public class HomeController {
 
     @RequestMapping("/productList")
     public String getProductList(Model model) {
-        List<Product> productList = productDao.getProductList();
-        Product product = productList.get(0);
-        //bind the product to the model, the model will attach to the view automatically
-        model.addAttribute(product);
+        List<Product> products = productDao.getProductList();
+        //bind the products to the model and give the attribute name as products.
+        // the model will attach to the view automatically
+        model.addAttribute("products", products);
         //return the view
         return "productList";
     }
