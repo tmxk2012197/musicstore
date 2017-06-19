@@ -11,7 +11,7 @@
         <div class="cotainers">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="#" alt="image" style="width: 100%; height: 200px"/>
+                    <img src="<c:url value="/resources/images/${product.productId}.png"/>" alt="image" style="width: 100%; height: 400px"/>
                 </div>
                 <div class="col-md-5">
                     <h3>${product.name}</h3>

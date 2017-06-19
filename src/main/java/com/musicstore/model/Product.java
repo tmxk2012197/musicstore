@@ -1,9 +1,8 @@
 package com.musicstore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -19,6 +18,10 @@ public class Product {
     private String manufacturer;
     private int unitInStock;
     private double price;
+
+    // hibernate will not create a field in db table for image when @Transient is used
+    @Transient
+    private MultipartFile productImage;
 
     public int getProductId() {
         return productId;
@@ -90,5 +93,13 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
     }
 }
