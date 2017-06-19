@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String productId;
+    private int productId;
 
     private String name;
     private String category;
@@ -20,11 +20,11 @@ public class Product {
     private int unitInStock;
     private double price;
 
-    public String getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
