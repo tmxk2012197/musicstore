@@ -19,6 +19,7 @@
                     <p><strong>Category</strong>: ${product.category}</p>
                     <P><strong>Condition</strong>: ${product.condition}</P>
                     <p><strong>Manufacturer</strong>: ${product.manufacturer}</p>
+                    <p><strong>Unit in Stock</strong>: ${product.unitInStock}</p>
                     <h4>${product.price} USD</h4>
                 </div>
             </div>

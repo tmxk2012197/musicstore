@@ -21,7 +21,7 @@ public class ProductDaoImpl implements ProductDao{
     public void addProduct(Product product) {
         //session is singleton
         Session session = sessionFactory.getCurrentSession();
-        session.save(product);
+        session.saveOrUpdate(product);
         //session operation will be executed only after flush
         session.flush();
     }
@@ -44,6 +44,13 @@ public class ProductDaoImpl implements ProductDao{
     public void deleteProduct(int productId) {
         Session session = sessionFactory.getCurrentSession();
         session.delete(getProductById(productId));
+        session.flush();
+    }
+
+    @Override
+    public void editProduct(Product product) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(product);
         session.flush();
     }
 }
