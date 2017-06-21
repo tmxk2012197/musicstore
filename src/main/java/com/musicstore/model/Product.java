@@ -1,8 +1,10 @@
 package com.musicstore.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Product {
@@ -10,13 +12,19 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int productId;
 
+    @NotEmpty(message = "Name of the product should not be empty")
     private String name;
+
     private String category;
     private String description;
     private String condition;
     private String status;
     private String manufacturer;
+    
+    @Min(value = 0, message = "Unit of the product should not be less than 0")
     private int unitInStock;
+
+    @Min(value = 0, message = "Price of the product should not be less than 0")
     private double price;
 
     // hibernate will not create a field in db table for image when @Transient is used

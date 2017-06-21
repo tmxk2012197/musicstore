@@ -10,7 +10,7 @@
 
         <form:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct" method="post" modelAttribute="product" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="productName">Name</label>
+                <label for="productName">Name</label> <form:errors path="name" cssStyle="color: #ac2925;"/>
                 <form:input path="name" id="productName" class="form-Control"/>
             </div>
 
@@ -33,7 +33,7 @@
             </div>
 
             <div class="form-group">
-                <label for="productPrice">Price</label>
+                <label for="productPrice">Price</label><form:errors path="price" cssStyle="color: #ac2925;"/>
                 <form:input path="price" id="productPrice" class="form-Control"/>
             </div>
 
@@ -58,7 +58,7 @@
             </div>
 
             <div class="form-group">
-                <label for="unitInStock">Unit In Stock</label>
+                <label for="unitInStock">Unit In Stock</label><form:errors path="unitInStock" cssStyle="color: #ac2925;"/>
                 <form:input path="unitInStock" id="unitInStock" class="form-Control"/>
             </div>
 
