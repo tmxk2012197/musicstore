@@ -14,3 +14,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.container-wrapper {
+    height: 80%;
+    margin: auto;
+}
+
+.home-image {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
