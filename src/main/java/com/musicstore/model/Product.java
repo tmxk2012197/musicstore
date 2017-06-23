@@ -20,7 +20,7 @@ public class Product {
     private String condition;
     private String status;
     private String manufacturer;
-    
+
     @Min(value = 0, message = "Unit of the product should not be less than 0")
     private int unitInStock;
 
