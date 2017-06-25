@@ -43,7 +43,7 @@ public class HomeController {
     }
 
     @RequestMapping("/productList/viewProduct/{productId}")
-    public String viewProduct(@PathVariable int productId, Model model) throws IOException{
+    public String viewProduct(@PathVariable(value = "productId") int productId, Model model) throws IOException{
         Product product = productDao.getProductById(productId);
         model.addAttribute(product);
         return "viewProduct";
