@@ -1,13 +1,18 @@
 package com.musicstore.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
-public class Product {
+public class Product implements Serializable{
+    private static final long serialVersionUID = 2133390177043437065L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int productId;
@@ -30,6 +35,12 @@ public class Product {
     // hibernate will not create a field in db table for image when @Transient is used
     @Transient
     private MultipartFile productImage;
+
+    //mappedby="field fo th owner"
+    //cascade all: persistence will propagate (cascade) all EntityManager operations (PERSIST, REMOVE, REFRESH, MERGE, DETACH) to the relating entities
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
+    private List<CartItem> cartItemList;
 
     public int getProductId() {
         return productId;
@@ -109,5 +120,13 @@ public class Product {
 
     public void setProductImage(MultipartFile productImage) {
         this.productImage = productImage;
+    }
+
+    public List<CartItem> getCartItemList() {
+        return cartItemList;
+    }
+
+    public void setCartItemList(List<CartItem> cartItemList) {
+        this.cartItemList = cartItemList;
     }
 }
