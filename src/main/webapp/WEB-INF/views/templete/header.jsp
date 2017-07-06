@@ -46,6 +46,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="<c:url value="/admin"/>"><span class="glyphicon glyphicon-user">Admin</span></a></li>
+                        <li><a href="<c:url value="/register"/> ">Register</a></li>
                     </ul>
                 </div>
             </div>
