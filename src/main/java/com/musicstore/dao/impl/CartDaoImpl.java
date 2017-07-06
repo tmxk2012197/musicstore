@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Repository
 public class CartDaoImpl implements CartDao{
-    private Map<String, Cart> carts;
+    private Map<Integer, Cart> carts;
 
     public CartDaoImpl() {
         this.carts = new HashMap<>();
@@ -25,12 +25,12 @@ public class CartDaoImpl implements CartDao{
     }
 
     @Override
-    public Cart readCartInfo(String cartId) {
+    public Cart readCartInfo(int cartId) {
         return carts.get(cartId);
     }
 
     @Override
-    public void updateCart(String cartId, Cart cart) {
+    public void updateCart(int cartId, Cart cart) {
         if (!carts.containsKey(cartId)) {
             throw new IllegalArgumentException(String.format("Cannot update the cart. A cart with the given id (%s) does not exist", cart.getCartId()));
         }
@@ -38,7 +38,7 @@ public class CartDaoImpl implements CartDao{
     }
 
     @Override
-    public void deleteCart(String cartId) {
+    public void deleteCart(int cartId) {
         if (!carts.containsKey(cartId)) {
             throw new IllegalArgumentException(String.format("Cannot delete the cart. A cart with the given id (%s) does not exist", cartId));
         }

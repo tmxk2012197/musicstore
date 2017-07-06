@@ -5,9 +5,9 @@ import com.musicstore.model.Cart;
 public interface CartDao {
     Cart createCart(Cart cart);
 
-    Cart readCartInfo(String cartId);
+    Cart readCartInfo(int cartId);
 
-    void updateCart(String cartId, Cart cart);
+    void updateCart(int cartId, Cart cart);
 
-    void deleteCart(String cartId);
+    void deleteCart(int cartId);
 }

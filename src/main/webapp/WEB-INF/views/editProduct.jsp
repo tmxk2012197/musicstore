@@ -8,7 +8,7 @@
             <p class="lead">Update the following information to  edit a product:</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/productInventory/editProduct" method="post" modelAttribute="product" enctype="multipart/form-data">
+        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct" method="post" modelAttribute="product" enctype="multipart/form-data">
         <form:hidden path="productId" value="${product.productId}"/>
         <div class="form-group">
             <label for="productName">Name</label>

@@ -29,7 +29,7 @@
                     <td>${product.condition}</td>
                     <td>${product.status}</td>
                     <td>${product.price} USD</td>
-                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>"><span class="glyphicon glyphicon-info-sign"></span></td>
+                    <td><a href="<spring:url value="/product/viewProduct/${product.productId}"/>"><span class="glyphicon glyphicon-info-sign"></span></td>
                 </tr>
             </c:forEach>
         </table>
