@@ -10,4 +10,6 @@ public interface CustomerDao {
     Customer getCustomerById(int customerId);
 
     List<Customer> getAllCustomer();
+
+    Customer getCustomerByUsername(String username);
 }
