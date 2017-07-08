@@ -46,7 +46,7 @@ public class adminProduct {
         productService.addProduct(product);
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = httpServletRequest.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images" + product.getProductId() + ".png");
+        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getProductId() + ".png");
         if (productImage != null && !productImage.isEmpty()) {
             try {
                 productImage.transferTo(new File(path.toString()));
@@ -72,7 +72,7 @@ public class adminProduct {
         }
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = httpServletRequest.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images" + product.getProductId() + ".png");
+        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getProductId() + ".png");
         if (productImage != null && !productImage.isEmpty()) {
             try {
                 productImage.transferTo(new File(path.toString()));
@@ -88,7 +88,7 @@ public class adminProduct {
     @RequestMapping("/product/deleteProduct/{id}")
     public String deleteProduct(@PathVariable int id, Model model, HttpServletRequest httpServletRequest) {
         String rootDirectory = httpServletRequest.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images" + id + ".png");
+        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + id + ".png");
         if (Files.exists(path)) {
             try {
                 Files.delete(path);

@@ -11,7 +11,7 @@ public class Customer implements Serializable{
     private static final long serialVersionUID = -6775780066971415193L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerId;
 
     @NotEmpty(message = "The customer's real name cannot be null")

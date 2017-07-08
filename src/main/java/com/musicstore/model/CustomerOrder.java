@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Order implements Serializable{
-    private static final long serialVersionUID = 6548595846141824420L;
+public class CustomerOrder implements Serializable{
+    private static final long serialVersionUID = 6609280259942985161L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerOrderId;
 
     @OneToOne

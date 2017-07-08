@@ -52,7 +52,7 @@
                                 <li><a href="<c:url value="/customer/cart"/>">Cart</a></li>
                             </c:if>
                             <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
-                                <li><a href="<c:url value="/customer/cart"/>">Admin</a></li>
+                                <li><a href="<c:url value="/admin"/>">Admin</a></li>
                             </c:if>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name == null}">

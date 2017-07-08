@@ -11,7 +11,7 @@ public class CartItem implements Serializable{
     private static final long serialVersionUID = 7693790535193398953L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int cartItemId;
 
     @ManyToOne

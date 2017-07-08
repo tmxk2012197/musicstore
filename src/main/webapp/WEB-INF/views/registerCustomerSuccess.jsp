@@ -6,8 +6,7 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Cart</h1>
-                    <p>Customer registered successfully!</p>
+                    <h2>Customer registered successfully!</h2>
                 </div>
             </div>
         </section>

@@ -1,9 +1,6 @@
 package com.musicstore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -11,7 +8,7 @@ public class ShippingAddress implements Serializable{
     private static final long serialVersionUID = 8008926175224075684L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int shippingAddressId;
 
     private String streetName;

@@ -5,6 +5,7 @@ import com.musicstore.model.Authorities;
 import com.musicstore.model.Cart;
 import com.musicstore.model.Customer;
 import com.musicstore.model.Users;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -23,6 +24,7 @@ public class CustomerDaoImpl implements CustomerDao{
     @Override
     public void addCustomer(Customer customer) {
         Session session = sessionFactory.getCurrentSession();
+
         customer.getBillingAddress().setCustomer(customer);
         customer.getShippingAddress().setCustomer(customer);
         session.saveOrUpdate(customer);

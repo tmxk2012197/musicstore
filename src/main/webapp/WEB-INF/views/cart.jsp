@@ -32,13 +32,13 @@
                             <td>{{item.product.price}}</td>
                             <td>{{item.quantity}}</td>
                             <td>{{item.totalPrice}}</td>
-                            <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)"><span class="glyphcion glyphicon-remove"></span>Remove</a> </td>
+                            <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)"><span class="glyphicon glyphicon-remove"></span>Remove</a> </td>
                         </tr>
                         <tr>
                             <th></th>
                             <th></th>
                             <th>Grand Total</th>
-                            <th>{{cart.grandTotal}}</th>
+                            <th>{{calculateGrandTotal()}}</th>
                             <th></th>
                         </tr>
                         </tbody>
