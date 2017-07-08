@@ -44,6 +44,6 @@
     <end-state id="cancelCheckout" view="checkoutCancelled.jsp"/>
 
     <global-transitions>
-        <transition on="Cancel" to="cancelCheckout"/>
+        <transition on="cancel" to="cancelCheckout"/>
     </global-transitions>
 </flow>

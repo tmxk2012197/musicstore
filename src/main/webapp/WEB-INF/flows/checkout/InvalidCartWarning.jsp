@@ -6,18 +6,17 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h2>Customer registered successfully!</h2>
+                    <h2>Invalid Cart</h2>
                 </div>
             </div>
         </section>
 
         <section class="container">
             <p>
-                <a href="<spring:url value="/product/productList"/>" class="btn btn-default">Products</a>
+                <a href="<spring:url value="/"/>" class="btn btn-default">OK</a>
             </p>
         </section>
     </div>
 </div>
 
-<script src="<c:url value="/resources/js/controller.js" /> "></script>
 <%@include file="/WEB-INF/views/templete/footer.jsp"%>

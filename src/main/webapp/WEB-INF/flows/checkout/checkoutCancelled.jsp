@@ -6,7 +6,8 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h2>Customer registered successfully!</h2>
+                    <h2 class="alert alert-danger">Checkout cancelled</h2>
+                    <p>Your checkout process is cancelled. You may continue shopping.</p>
                 </div>
             </div>
         </section>
@@ -19,5 +20,4 @@
     </div>
 </div>
 
-<script src="<c:url value="/resources/js/controller.js" /> "></script>
 <%@include file="/WEB-INF/views/templete/footer.jsp"%>
