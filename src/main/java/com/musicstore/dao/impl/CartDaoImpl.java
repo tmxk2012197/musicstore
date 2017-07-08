@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
+
 @Repository
 @Transactional
 public class CartDaoImpl implements CartDao{
@@ -23,5 +25,15 @@ public class CartDaoImpl implements CartDao{
     @Override
     public void updateCart(Cart cart) {
         int cartId = cart.getCartId();
+    }
+
+    @Override
+    public Cart validate(int cartId) throws IOException {
+        Cart cart = getCartById(cartId);
+        if (cart == null || cart.getCartItems().size() == 0) {
+            throw new IOException(cartId + "");
+        }
+        updateCart(cart);
+        return cart;
     }
 }
