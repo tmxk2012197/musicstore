@@ -1,6 +1,8 @@
 package com.musicstore.controller.admin;
 
+import com.musicstore.model.Customer;
 import com.musicstore.model.Product;
+import com.musicstore.service.CustomerService;
 import com.musicstore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,9 @@ import java.util.List;
 public class AdminHome {
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private CustomerService customerService;
 
     @RequestMapping
     public String adminPage() {
@@ -29,6 +34,9 @@ public class AdminHome {
 
     @RequestMapping("/customer")
     public String customerManagement(Model model) {
+        List<Customer> customerList = customerService.getAllCustomer();
+        model.addAttribute("customerList", customerList);
         return "customerManagement";
     }
+
 }

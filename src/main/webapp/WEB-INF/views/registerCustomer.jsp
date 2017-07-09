@@ -11,11 +11,11 @@
         <form:form action="${pageContext.request.contextPath}/register" method="post" modelAttribute="customer">
         <h3>Basic Information</h3>
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Name</label><form:errors path="customerName" cssStyle="color: #ac2925;"/>
             <form:input path="customerName" id="name" class="form-Control"/>
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email</label><span style="color: #ac2925;">${emailMsg}</span><form:errors path="customerEmail" cssStyle="color: #ac2925;"/>
             <form:input path="customerEmail" id="email" class="form-Control"/>
         </div>
         <div class="form-group">
@@ -23,11 +23,11 @@
             <form:input path="customerPhone" id="phone" class="form-Control"/>
         </div>
         <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Username</label><span style="color: #ac2925;">${usernameMsg}</span><form:errors path="username" cssStyle="color: #ac2925;"/>
             <form:input path="username" id="username" class="form-Control"/>
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password">Password</label><form:errors path="password" cssStyle="color: #ac2925;"/>
             <form:password path="password" id="password" class="form-Control"/>
         </div>
 
