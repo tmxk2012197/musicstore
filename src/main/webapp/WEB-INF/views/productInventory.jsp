@@ -1,6 +1,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="/WEB-INF/views/templete/header.jsp"%>
+<script>
+    <%-- when the html is fully loaded, execute the func --%>
+    $(document).ready(function () {
+        $('.table').DataTable({
+            "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10,"All"]]
+        });
+    });
+</script>
 
 <div class="container-wrapper">
     <div class="container">
