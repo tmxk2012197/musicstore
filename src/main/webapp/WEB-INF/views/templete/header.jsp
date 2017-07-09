@@ -13,13 +13,19 @@
     <title>MC's Music Store</title>
 
     <!--Angular JS-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!--JQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--data table js-->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css">
     <!-- Main CSS -->
     <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet" type="text/css">
     <!-- Carousel CSS -->
     <link href="<c:url value="/resources/css/carousel.css"/>" rel="stylesheet" type="text/css">
+    <!--data table css-->
+    <link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 </head>
 <!-- NAVBAR
 ================================================== -->
