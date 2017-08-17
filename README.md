@@ -1,4 +1,4 @@
-# E-commerence Music Store
+# E-commerce Music Store
 
 ## Overview
 
